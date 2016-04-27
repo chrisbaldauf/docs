@@ -8,7 +8,7 @@ In order for this to work you will need to generate a token for Auth0's API v2 y
 With this token you can call the `/api/v2/clients` endpoint to create a new **Client**:
 
 ```text
-POST https://${account.namespace}/api/v2/resource-servers
+POST https://${account.namespace}/api/v2/clients
 
 Authorization: Bearer {APIV2_TOKEN}
 Content-Type: application/json
@@ -25,7 +25,7 @@ Content-Type: application/json
 }
 ```
 
-When creating a **Clients** you'll need to specify the following:
+When creating a **Client** you'll need to specify the following:
 
  - `name`: The display name of the **Client**.
  - `resource_servers`: A list of **Resource Servers** the client will be able to get a token for. For each **Resource Server** it will also be possible to define which scopes a **Client** can request (it could be that a given client is only allowed to request a subset of scopes that are defined by the **Resource Server**)
